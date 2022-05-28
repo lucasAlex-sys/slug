@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import {Route,Redirect} from 'react-router-dom'
-import Card from '../Components/Card';
-import CardData from '../MockData/CardData';
-
+import Card from '../../Components/Card';
+import CardData from '../../MockData/CardData.jsx';
+import './styles.css';
 const Feed = () =>{
    
     return (

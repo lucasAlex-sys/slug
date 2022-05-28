@@ -1,6 +1,6 @@
 import React from "react";
-import Index from "../Pages/Index";
-import CardData from "../MockData/CardData"
+import Login from "../../Pages/Login";
+import CardData from "../../MockData/CardData"
 import { Cards, Button } from 'react-bootstrap';
 const Card = () => {
     const card1 =

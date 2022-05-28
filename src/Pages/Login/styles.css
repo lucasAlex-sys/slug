@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
   color: white;
   font-size: calc(4px + 2vmin);
-  height: 130vh;
+  min-height: 100vh;
  
 }
 .App-main-rigth{
@@ -16,7 +16,7 @@
 }
 .App-main-left{
   background-color: rgb(55, 0, 255);
-  background-image: url(../public/assets/imageMainLeft.svg);
+  background-image: url(../../assets/imageMainLeft.svg);
   background-size: cover;
   padding-left: 50px;
   padding-right: 50px;
