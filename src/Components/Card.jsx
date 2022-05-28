@@ -1,9 +1,29 @@
 import React from "react";
 import Index from "../Pages/Index";
 import CardData from "../MockData/CardData"
-const Card = () =>{
-    
+import { Cards, Button } from 'react-bootstrap';
+const Card = () => {
+    const card1 =
+    {
+        "objeto": "lucas1",
+        "descrição": "123456",
+        "local": "",
+        "data": ""
+    }
+    CardData.add(card1)
     return (
+
+        <div>
+            
+        </div>
+
+    )
+
+}
+
+export default Card;
+/*
+ return (
         <div>
             {
                 CardData.get().map(n => 
@@ -17,7 +37,4 @@ const Card = () =>{
             }
         </div> 
     )
-    
-}
-
-export default Card;
+*/

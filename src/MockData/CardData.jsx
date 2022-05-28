@@ -15,7 +15,6 @@ const card1 = [
 ]
 
 var index = 0
-var cards = []
 //cards.add(card1[0])
 
 function add(card){

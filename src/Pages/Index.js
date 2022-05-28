@@ -39,7 +39,7 @@ const Index = () => {
             <div className='Login'>
             <input 
                 id="password"
-                type="text"
+                type="password"
                 name="password"
                 placeholder="Login"
                 value={pass}
