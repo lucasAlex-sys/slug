@@ -1,7 +1,74 @@
-.App {
-  text-align: center;
+.App-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: nowrap;
+  color: white;
+  font-size: calc(4px + 2vmin);
+  height: 130vh;
+ 
 }
+.App-main-rigth{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background-color: #EFF6FF;
+ 
+}
+.App-main-left{
+  background-color: rgb(55, 0, 255);
+  background-image: url(../public/assets/imageMainLeft.svg);
+  background-size: cover;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40%;
+  text-align: center;
 
+}
+.Img-logo-cefet{
+  margin: auto;
+  margin-top:20% ;
+  width: 200px;
+  height: 200px;
+}
+.Login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  Flex-shrink: 2;
+  
+}
+.Login input{
+  box-sizing: border-box;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 5px;
+}
+.Button-login{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  margin-top: 5%;
+ 
+}
+.Button-login button{
+  
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background: #00386B;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.Button-login button:hover{
+  background-color: #00387B;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
