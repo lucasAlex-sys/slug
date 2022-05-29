@@ -1,15 +1,15 @@
 const card1 = [
     {
         "objeto":"lucas1",
-        "descrição":"123456",
-        "local":"",
-        "data": new Date().toString
+        "img":"../../assets/logoCEFETMG.svg",
+        "local":"predio 20",
+        "data":  "28/05/2022 às 22:32"
     },
     {
         "objeto":"lucas2",
-        "descrição":"123456",
-        "local":"",
-        "data": new Date().toString
+        "img":"../../assets/logoCEFETMG.svg",
+        "local":"predio 20",
+        "data": "28/05/2022 às 22:32"
     }
     
 ]
