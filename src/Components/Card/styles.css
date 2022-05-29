@@ -1,4 +1,31 @@
+.Card-Component{
+    
+    box-sizing: border-box;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 20px;
+}
+.Card-imagem{
+    min-width: 200px;
+    min-height: 200px;
+}
+.Card-titulo-local{
+    margin: 5px;
+}
+.Card-data{
+    text-align: end;
+    margin-right: 7px;
+    
+}
 .Card{
-    width: 100vh;
-    height: 100vh;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
