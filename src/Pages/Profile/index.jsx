@@ -12,7 +12,7 @@ import './styles.css';
 
 const Profile = () => {
     return (
-        <body>
+        <div id="body">
             <Avatar id="avatar" alt={User.name} src={User.profileUrl} />
             <p id="name">{User.name}</p>
             <p id="matricula">{User.matricula}</p>
@@ -43,7 +43,7 @@ const Profile = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </body>
+        </div>
     );
 }
 export default Profile;
