@@ -1,0 +1,105 @@
+html {
+    min-height: 100vh;
+    font-size: large;
+}
+
+body {
+    background-color: #EFF6FF;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+form p {
+    display: flex;
+    grid-column: 1;
+    justify-content: center;
+}
+
+form input[type=text] {
+    height:max-content;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 2%;
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#imageSector {
+    display: flex;
+    grid-column:  2;
+    grid-row: 1 / 4;
+    justify-content: center;
+}
+
+form button {
+    grid-column: 1/2;
+    width: 40%;
+    font-size: large;
+    margin: auto;
+    justify-content: center;
+    background: #00386B;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    width: 90%;
+    height: 80px;
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+textarea::placeholder {
+    padding-left: 10px;
+}
+
+#location {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-size: x-large;
+}
+
+select{
+    font-size: large;
+}
+#selectImage{
+    align-items: center;
+    padding: 20%;
+}
+#icon {
+    display: flex;
+    align-items: center;
+}
+#imageSector{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#showImage button{
+    margin-top: 20px;
+    display: block;
+}
+#showImage img{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
