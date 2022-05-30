@@ -25,6 +25,7 @@ function getObjectFromCode(code) {
     return null
 }
 function getObjectsFromUser(matricula) {
+    if(matricula==="294298775125")
     return {
         profileUrl: 'https://s2.glbimg.com/AiGp7DBm8nXkLk5iAA0YmeBEgf8=/0x0:984x612/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2022/A/3/AHyD7qQlO1TaMsseqLNg/casimiro.jpg',
         name: 'Case Mito',
@@ -55,9 +56,16 @@ function getObjectsFromUser(matricula) {
                 id: 56,
                 objeto: 'Relógio de luxo',
                 status: 'Entregue'
+            },
+            {
+                id: 56,
+                objeto: 'Relógio de luxo',
+                status: 'Retirado',
+                matricula:'5555262624'
             }
         ]
     }
+    return null;
 }
 function editObject(id,matricula=null) {
     console.log(objects[id]);
