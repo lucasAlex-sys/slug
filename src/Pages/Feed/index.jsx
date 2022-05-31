@@ -8,27 +8,25 @@ import CardData from '../../MockData/CardData.jsx';
 import './styles.css';
 
 const Feed = () => {
-
     return (
         <div className='Feed'>
             <div className='Feed-header'>
                 <img src={cefet} className='Feed-img'/>
-                <Form >
+                
                     <FormControl
                         type="search"
                         aria-label="Search"
                         className='Feed-search' 
                         style={{ width: '25rem', border: '1px solid rgba(0, 0, 0, 0.53)' }}
-                    />
-                    
-                </Form>
+                    />   
+                
                 <Button variant="secondary" style={{ background: '#00386B',width: '15rem'}} className='Feed-buttom'>
                         Cadastrar
                 </Button>{' '}
                 <img src={cefet} className='Feed-buttom-image'/>
             </div>
             <div>
-            <CardComponents />
+                <CardComponents />
             </div>
         </div>
     );
