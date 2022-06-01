@@ -9,7 +9,7 @@ const Login = () => {
     const [pass, setPass] = useState("")
     const navigation = useNavigate();
     function Feed() {
-        if (user === "lucas" && pass === "lucas") {
+        if (user === "admin" && pass === "admin") {
             return navigation('/feed')
         }
         else
