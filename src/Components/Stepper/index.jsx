@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 
 const steps = ['Achado', 'Entregue'];
 
-export default function HorizontalLinearStepper() {
-    const [activeStep, setActiveStep] = React.useState(0);
+export default function HorizontalLinearStepper(params) {
+    let position=params.position
+    const [activeStep, setActiveStep] = React.useState(position);
     const [skipped, setSkipped] = React.useState(new Set());
 
     const isStepOptional = (step) => {
@@ -60,9 +61,9 @@ export default function HorizontalLinearStepper() {
                 {steps.map((label, index) => {
                     const stepProps = {};
                     const labelProps = {};
-                    if (isStepSkipped(index)) {
-                        stepProps.completed = false;
-                    }
+                   // if (isStepSkipped(index)) {
+                     //   stepProps.completed = false;
+                    //}
                     return (
                         <Step key={label} {...stepProps}>
                             <StepLabel {...labelProps}>{label}</StepLabel>
