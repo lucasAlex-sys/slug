@@ -1,8 +1,5 @@
 const card1 = []
 
-var index = 0
-//cards.add(card1[0])
-
 function add(card){
     card1.push(card)
 }

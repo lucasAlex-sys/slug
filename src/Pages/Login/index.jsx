@@ -7,13 +7,13 @@ import './styles.css';
 const Login = () => {
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
-    const navi = useNavigate();
-    function teste() {
+    const navigation = useNavigate();
+    function Feed() {
         if (user === "lucas" && pass === "lucas") {
-            return navi('/feed')
+            return navigation('/feed')
         }
         else
-            return navi('/')
+            return navigation('/')
     }
     return (
 
@@ -47,7 +47,7 @@ const Login = () => {
                         onChange={e => setPass(e.target.value)}
                     />
                 </div>
-                <div className="Button-login" onClick={teste}>
+                <div className="Button-login" onClick={Feed}>
                     <button type="submit"  >
                         Login
                     </button>

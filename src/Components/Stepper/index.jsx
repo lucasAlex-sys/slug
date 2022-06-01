@@ -10,7 +10,6 @@ const steps = ['Achado', 'Entregue'];
 
 export default function HorizontalLinearStepper(params) {
     let position=params.position
-    //console.log(position);
     const [activeStep, setActiveStep] = React.useState(position);
     const [skipped, setSkipped] = React.useState(new Set());
 
