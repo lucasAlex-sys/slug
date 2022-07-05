@@ -6,41 +6,69 @@ import ney from '../../assets/ney.jpg';
 import './styles.css';
 import { FaSistrix } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import CardData from "../../MockData/CardData"
+import {ArrowClockwise} from 'phosphor-react'
+import User from '../../MockData/user';
+import {Link} from 'react-router-dom';
 
-const Feed  = () => {   
-    const [inputSearch, setUser] = useState("")
-    const navigation = useNavigate()
-    function pagCadastrar() {
-        return navigation('/Register')
-    } 
+class Feed  extends React.Component {   
+    constructor(props) {
+        super(props);
+        this.state = {
+            search: '',
+            clickSeach: false
+        };
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+    handleInputChange(event) {
+        const target = event.target;
+        console.log(target);
+        const value = target.type === "file" ? target.files[0] : target.value
+        this.setState({
+            [target.name]: value
+        });
+    }
    
-    return (
-        <div className='Feed'>
-            <div className='Feed-header'>
-                <img src={cefet} className='Feed-img'/>
-                <div style={{display:'flex'}}>
-                    <FormControl
-                        type="search"
-                        aria-label="Search"
-                        className='Feed-search' 
-                        style={{ width: '25rem', border: '1px solid rgba(0, 0, 0, 0.53)' }}
-                        value={inputSearch}
-                        onChange={e => setUser(e.target.value)}
-                    />
-                    <Button  style={{ width: '2rem', border: '1px solid rgba(0, 0, 0, 0.53)', margin:'5px',background: "#FFFFFF"  }} >
-                        <FaSistrix   /> 
-                    </Button>{' '}
-                </div>     
-                <Button variant="secondary" style={{ background: '#00386B',width: '15rem'}} className='Feed-buttom' onClick={pagCadastrar}>
-                        Cadastrar
-                </Button>{' '}
-                <img src={ney} className='Feed-buttom-image'/>
+    render() {
+        const Cards = CardData.get()
+        const clickSearch = this.state.search
+        return (
+            <div className='Feed'>
+                <div className='Feed-header'>
+                    <img src={cefet} className='Feed-img' />
+                    <div style={{ display: 'flex' }}>
+                        <FormControl
+                            name="search"
+                            type="text"
+                            aria-label="Search"
+                            className='Feed-search'
+                            style={{ width: '25rem', border: '1px solid rgba(0, 0, 0, 0.53)' }}
+                            value={this.state.search}
+                            onChange={this.handleInputChange}
+                        />
+                        <Button style={{ width: '2rem', border: '1px solid rgba(0, 0, 0, 0.53)', margin: '5px', background: "#FFFFFF" }} onClick={() => {
+                                            this.render()
+                                        }}>
+                            <ArrowClockwise size={25} />
+
+                        </Button>{' '}
+                    </div>
+                    <Link to={`/register`}>
+                        <Button variant="secondary" style={{ background: '#00386B', width: '15rem' }} className='Feed-buttom' >
+                            Cadastrar
+                        </Button>{' '}
+                    </Link>                   
+                    <Link to={`/profile/${User.matricula}`}>
+                        <img src={ney} className='Feed-buttom-image' />
+                    </Link>
+                </div>
+                <div>
+                    <CardComponents cards = {Cards} search = {this.state.search}/>
+                </div>
             </div>
-            <div>
-                <CardComponents />
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Feed;

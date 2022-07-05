@@ -9,8 +9,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import './styles.css';
+import { useParams } from 'react-router-dom';
 
-const Profile = () => {
+const Profile = (props) => {
+    
     return (
         <div id="body">
             <Avatar id="avatar" alt={User.name} src={User.profileUrl} />
