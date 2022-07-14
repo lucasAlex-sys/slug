@@ -1,3 +1,4 @@
+//const image = 
 import React,{ useState } from 'react';
 import CardComponents from '../../Components/Card';
 import { Button,FormControl} from 'react-bootstrap';
@@ -8,7 +9,8 @@ import { FaSistrix } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import CardData from "../../MockData/CardData"
 import {ArrowClockwise} from 'phosphor-react'
-import User from '../../MockData/user';
+import UserR from '../../MockData/user';
+import User from '../../Models/User'
 import {Link} from 'react-router-dom';
 
 class Feed  extends React.Component {   
@@ -16,9 +18,10 @@ class Feed  extends React.Component {
         super(props);
         this.state = {
             search: '',
-            clickSeach: false
+            clickSeach: false,
+            
         };
-
+        
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     handleInputChange(event) {
@@ -32,7 +35,10 @@ class Feed  extends React.Component {
    
     render() {
         const Cards = CardData.get()
+        //const Image = User.prototype.getNome()
         const clickSearch = this.state.search
+        var storedArray = localStorage.getItem("userData");
+        var ImageUser = JSON.parse(storedArray);
         return (
             <div className='Feed'>
                 <div className='Feed-header'>
@@ -59,8 +65,8 @@ class Feed  extends React.Component {
                             Cadastrar
                         </Button>{' '}
                     </Link>                   
-                    <Link to={`/profile/${User.matricula}`}>
-                        <img src={ney} className='Feed-buttom-image' />
+                    <Link to={`/profile/${UserR.matricula}`}>
+                        <img src={ ImageUser.imagem } className='Feed-buttom-image' />
                     </Link>
                 </div>
                 <div>

@@ -55,6 +55,15 @@
   margin-top: 5%;
  
 }
+.Mensagem {
+  
+  margin: 5px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  Flex-shrink: 2;
+  color:red
+}
 .Button-login button{
   
   margin-left: 30%;

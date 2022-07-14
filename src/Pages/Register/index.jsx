@@ -1,8 +1,14 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import './styles.css';
+//import Cadastro from "../../Services/Cadastro";
+import Cadastro from '../../Services/Cadastro'
 
-
+const CadastroObj = async () => {
+    
+            const userData =  await Cadastro(this.state.object,this.state.description,this.state.description,this.state.image,this.state.local,this.state.description)
+            console.log(userData)    
+}
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -28,6 +34,7 @@ class Register extends React.Component {
     changeVisibilityOfImage() {
 
     }
+    
 
     render() {
         return (
@@ -99,7 +106,7 @@ class Register extends React.Component {
                             </div>
                         </p>
 
-                        <button type="submit"  >
+                        <button type="submit"   onClick={CadastroObj}>
                             Cadastrar
                         </button>
                     </form>
